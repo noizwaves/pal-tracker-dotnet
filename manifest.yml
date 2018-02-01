@@ -3,6 +3,4 @@ applications:
 - name: pal-tracker
   path: src/PalTracker
   random-route: true
-  env:
-    WELCOME_MESSAGE: Hello from Cloud Foundry
 
