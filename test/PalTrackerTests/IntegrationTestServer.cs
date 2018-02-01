@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.PlatformAbstractions;
 using PalTracker;
 
@@ -15,6 +16,7 @@ namespace PalTrackerTests
         public static TestServer Start() => new TestServer(
             new WebHostBuilder()
                 .UseContentRoot(ContentRoot)
+                .ConfigureAppConfiguration(cb => { cb.AddEnvironmentVariables(); })
                 .UseStartup<Startup>()
         );
     }
