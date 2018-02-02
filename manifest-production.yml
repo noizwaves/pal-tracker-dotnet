@@ -1,0 +1,6 @@
+---
+applications:
+- name: pal-tracker
+  path: src/PalTracker
+  host: an-pal-tracker
+
